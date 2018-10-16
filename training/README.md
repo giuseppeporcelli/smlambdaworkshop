@@ -19,6 +19,8 @@ It contains a public set of SMS labeled messages that have been collected for mo
 |Ham                 |                        |
 |Spam                |                        |
 
+If you want to know more about the origin of the words spam & ham please visit: <a href="https://en.wiktionary.org/wiki/ham_e-mail">https://en.wiktionary.org/wiki/ham_e-mail</a>
+
 The collection is composed by just one text file, where each line has the correct class followed by the raw message. Some examples are bellow: 
 
 |Class |SMS Text|
