@@ -1,14 +1,14 @@
-# Hosting the model in a Lambda Function and executing inferences
+# Create Lambda function
 
 Once you have trained your model and he's hosted in S3, the next thing to do is to create a Lambda function and expose it by Amazon API Gateway.
 
-## Create Lambda function
+## Create Lambda fucntion
 
 In order to create the Lambda function, we will use Amazon Cloud9 that will help us to build the deployment package of the Lambda function and create the Lambda itself.
 
 1. Open your **AWS Console** and open **Cloud9**
 2. Click on **Create environment**
-3. Add a name **LambdaEnviroment**, click on **Next step**
+3. Add a name **smlambdaworkshop-env**, click on **Next step**
 4. Leave the configuration with the default settings and click on **Next step**
 5. Click **Create environment**
 
@@ -19,13 +19,13 @@ Now that we have created our Cloud9 environment we will be waiting a couple of m
 Once the environment is up and running please:
 
 1. Press on AWS Resources on the right side of the screen
-2. Click on the **Lambda icon** to create a new function as it is shown on the picture below ![Screenshot](../images/AWSResources.jpeg) 
-3. Type a function name **LambdaMXNetInference** and click **Next**
+2. Click on the **Lambda icon** to create a new function as it is shown on the picture below ![Screenshot](screenshots/AWSResources.jpeg) 
+3. Type a function name **smlambdaworkshop-function** and click **Next**
 4. Select **Python2.7** in runtime. Then chose **api-gateway-authorizer-python** and click **Next**
 5. In Function trigger, leave none and click **Next**
 6. In Create serverless application, leave as it is and click **Next**
 7. Press **Finish**
-8. Once clicked on **Finish** you would get a pop up window asking for **Drag & drop files here**, please ignore it by click on **x** on the top right corner of the popup window.
+8. Once clicked on **Finish** you might get a pop up window asking for **Drag & drop files here**, in this case, please ignore it by click on **x** on the top right corner of the popup window.
 
 Now that we have created our Lambda, we would have an empty lambda function like this:
 
@@ -36,6 +36,8 @@ Next, we need to add all the MXNet libraries, Lambda function code and the model
 Go to the command line in the bottom of the page ```ec2-user:~/environment $``` and from there paste the following command:
 
 ```
+rm lambda_function.py
+
 cd LambdaMXNetInference
 
 git clone https://github.com/diegonat/lambdamxnet.git
@@ -85,14 +87,20 @@ Now we need to add the model that we trained. To do this, we will use AWS CLI to
 
 1. Go to **AWS Console** and open **S3**
 2. Select the S3 bucket with the name you chose before, in my case **lambdaMXnetBucket-DN**
-3. bla bla bla
+3. Surf into the directory with the following format **smlambda-workshop-dn/sms-spam-classifier/output/sms-spam-classifier-mxnet-{YYYY-MM-DD-hh-mm-ss-sss}
+4. remember this directory
 
 
 Now we go back to Cloud9 and we copy in the Lambda function folder the model:
 
 ```
-aws s3 cp s3://lambdaMXnetBucket-DN/model.tar.gz .
 
+aws s3 cp s3://smlambda-workshop-{INITIALS}/sms-spam-classifier/output/sms-spam-classifier-mxnet-{YYYY-MM-DD-hh-mm-ss-sss}/model.tar.gz .
+
+##aws s3 cp s3://lambdaMXnetBucket-DN/model.tar.gz .
+
+
+##aws s3 cp s3://lambdaMXnetBucket-DN/model.tar.gz .
 ##wget https://s3.amazonaws.com/mltestdiegomxnet/model.tar.gz
 
 tar zxf model.tar.gz
@@ -163,3 +171,11 @@ Next step is to test the newly created API:
 5. Copy the Invoke URL. It should have a format similar to **https://{some-random-keys}.execute-api.us-east-1.amazonaws.com/Prod**
 
 Go to the URL www.www.www. 
+.
+.
+.
+.
+
+
+
+
