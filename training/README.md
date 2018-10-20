@@ -14,10 +14,10 @@ In this section, we will walk you through creating and training a spam filter ma
 In order to train the model, we will use the <a href="https://archive.ics.uci.edu/ml/datasets/sms+spam+collection">**UCI SMS Spam Collection**</a> dataset.
 It contains a public set of SMS labeled messages that have been collected for mobile phone spam research.
 
-|Number of examples  | 5572                      |
+|Number of examples  | 5574                      |
 |--------------------|---------------------------|
-|Ham                 |                        |
-|Spam                |                        |
+|Ham                 | 4827                      |
+|Spam                | 747                       |
 
 If you want to know more about the origin of the words spam & ham please visit: <a href="https://en.wiktionary.org/wiki/ham_e-mail">https://en.wiktionary.org/wiki/ham_e-mail</a>
 
