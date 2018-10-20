@@ -77,7 +77,7 @@ def one_hot(text, n,
         (unicity non-guaranteed).
     """
     return hashing_trick(text, n,
-                         hash_function=hash,
+                         hash_function='md5',
                          filters=filters,
                          lower=lower,
                          split=split)
