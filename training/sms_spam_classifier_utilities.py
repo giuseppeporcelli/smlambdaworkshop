@@ -121,4 +121,4 @@ def hashing_trick(text, n,
                                 filters=filters,
                                 lower=lower,
                                 split=split)
-    return [(hash_function(w) % (n - 1) + 1) for w in seq]
+    return [int(hash_function(w) % (n - 1) + 1) for w in seq]
