@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  LambdaMXNetInference:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.handler
+      Runtime: python2.7
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      CodeUri: .debug/
+      Events:
+        GetInference:
+          Type: Api
+          Properties:
+            Path: /
+            Method: any
+        OptionsInference:
+          Type: Api
+          Properties:
+            Path: /
+            Method: OPTIONS
