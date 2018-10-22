@@ -20,7 +20,7 @@ Once the environment is up and running please:
 
 1. Press on AWS Resources on the right side of the screen
 2. Click on the **Lambda icon** to create a new function as it is shown on the picture below ![Screenshot](screenshots/AWSResources.jpeg) 
-3. Type a function name **smlambdaworkshop-function** and click **Next**
+3. Type a function name **smlambdaworkshopfunction** and click **Next**
 4. Select **Python2.7** in runtime. Then chose **api-gateway-authorizer-python** and click **Next**
 5. In Function trigger, leave none and click **Next**
 6. In Create serverless application, leave as it is and click **Next**
@@ -36,9 +36,7 @@ Next, we need to add all the MXNet libraries, Lambda function code and the model
 Go to the command line in the bottom of the page ```ec2-user:~/environment $``` and from there paste the following command:
 
 ```
-rm lambda_function.py
-
-cd LambdaMXNetInference
+cd smlambdaworkshopfunction
 
 git clone https://github.com/diegonat/lambdamxnet.git
     
@@ -52,7 +50,7 @@ cd ../
 
 rm -rf lambdamxnet
 
-rm -rf LambdaMXNetInference
+rm -rf smlambdaworkshopfunction
 
 ```
 
@@ -86,7 +84,7 @@ In this template we define a Lambda function with Python 2.7 as runtime and we w
 Now we need to add the model that we trained. To do this, we will use AWS CLI to copy the file from S3. However, before we need to know the URL where the model is. In SageMaker before we indicated the S3 bucket were the model will be stored. By using S3 console we will look for the file and path.
 
 1. Go to **AWS Console** and open **S3**
-2. Select the S3 bucket with the name you chose before, in my case **lambdaMXnetBucket-DN**
+2. Select the S3 bucket with the name you chose before, in my case **lambdaMXnetBucket-dn**
 3. Surf into the directory with the following format **smlambda-workshop-dn/sms-spam-classifier/output/sms-spam-classifier-mxnet-{YYYY-MM-DD-hh-mm-ss-sss}
 4. remember this directory
 
