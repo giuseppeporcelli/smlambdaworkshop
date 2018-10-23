@@ -51,6 +51,10 @@ Execute the following steps:
 2. [Hosting the model in a Lambda Function and executing inferences](hosting/README.md)
 3. [Automating deployment](automating/README.md)
 
+Bonus:
+
+[Building Apache MXNet deployment package for AWS Lambda](building/README.md)
+
 ## License
 
 The contents of this workshop are licensed under the [Apache 2.0 License](./LICENSE).
@@ -58,5 +62,5 @@ The contents of this workshop are licensed under the [Apache 2.0 License](./LICE
 
 ## Authors
 
-Diego Natali 
-Giuseppe Porcelli
+[Diego Natali](https://www.linkedin.com/in/diego-natali-63182b35/) - Solutions Architect - Amazon Web Services EMEA<br />
+[Giuseppe Porcelli](https://it.linkedin.com/in/giuporcelli) - Sr. Solutions Architect - Amazon Web Services EMEA
