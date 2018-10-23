@@ -54,3 +54,9 @@ Execute the following steps:
 ## License
 
 The contents of this workshop are licensed under the [Apache 2.0 License](./LICENSE).
+
+
+## Authors
+
+Diego Natali 
+Giuseppe Porcelli
