@@ -16,14 +16,11 @@ First of all, we need to upload two key files into our S3 bucket **_smlambda-wor
 1. Download these three files from our repository:
 
 ```
-# This is the Lambda function that will copy the model.tar.gz to a newly created bucket to start the pipeline
-wget ...
-
 # This is an empty.zip file that is necessary for AWS CodePipeline to use S3 as a source repository. For the way we approached the creation of our Lambda function, this is an empty file zip.  
-wget ...
+wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating/empty.zip
 
 # This is the CloudFormation template that will create all the pipeline
-wget ...
+wget https://raw.githubusercontent.com/giuseppeporcelli/smlambdaworkshop/master/automating/pipeline.yaml
 
 ```
 
