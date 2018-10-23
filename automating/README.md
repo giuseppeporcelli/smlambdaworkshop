@@ -74,9 +74,7 @@ In order to monitor the pipeline, we will use AWS CodePipeline console:
 8. Select **Prod**
 9. Copy the Invoke URL. It should have a format similar to **https://{some-random-keys}.execute-api.us-east-1.amazonaws.com/Prod**
 
-Go to the URL www.www.www.
+Go to the URL [https://apitester.diegos.it/](https://apitester.diegos.it/) and add your Amazon API Gateway endpoint and press **SUBMIT**. It would be easy to see the result and the prediction. 
 
-..
-..
-..
+![API Tester](../images/apitester.jpeg)
 

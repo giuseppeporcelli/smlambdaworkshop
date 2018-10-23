@@ -38,9 +38,9 @@ Go to the command line in the bottom of the page ```ec2-user:~/environment $``` 
 ```
 cd smlambdaworkshopfunction
 
-git clone https://github.com/diegonat/lambdamxnet.git
+git clone https://github.com/diegonat/smwshop.git
     
-cd lambdamxnet
+cd smwshop
     
 rm -rf .git
     
@@ -48,9 +48,7 @@ mv * ../
 
 cd ../
 
-rm -rf lambdamxnet
-
-rm -rf smlambdaworkshopfunction
+rm -rf smwshop
 
 ```
 
@@ -75,8 +73,12 @@ Resources:
           Type: Api
           Properties:
             Path: /
-            Method: post
-
+            Method: any
+        OptionsInference:
+          Type: Api
+          Properties:
+            Path: /
+			  Method: OPTIONS
 ```
 
 In this template we define a Lambda function with Python 2.7 as runtime and we will also create the Amazon API Gateway that will expose the Lambda function with a GET method.
@@ -168,12 +170,6 @@ Next step is to test the newly created API:
 4. Select **Prod**
 5. Copy the Invoke URL. It should have a format similar to **https://{some-random-keys}.execute-api.us-east-1.amazonaws.com/Prod**
 
-Go to the URL www.www.www. 
-.
-.
-.
-.
+Go to the URL [https://apitester.diegos.it/](https://apitester.diegos.it/) and add your Amazon API Gateway endpoint and press **SUBMIT**. It would be easy to see the result and the prediction. 
 
-
-
-
+![API Tester](../images/apitester.jpeg)
