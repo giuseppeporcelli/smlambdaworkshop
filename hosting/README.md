@@ -94,14 +94,7 @@ Now we need to add the model that we trained. To do this, we will use AWS CLI to
 Now we go back to Cloud9 and we copy in the Lambda function folder the model:
 
 ```
-
 aws s3 cp s3://smlambda-workshop-{INITIALS}/sms-spam-classifier/output/sms-spam-classifier-mxnet-{YYYY-MM-DD-hh-mm-ss-sss}/model.tar.gz .
-
-##aws s3 cp s3://lambdaMXnetBucket-DN/model.tar.gz .
-
-
-##aws s3 cp s3://lambdaMXnetBucket-DN/model.tar.gz .
-##wget https://s3.amazonaws.com/mltestdiegomxnet/model.tar.gz
 
 tar zxf model.tar.gz
 
