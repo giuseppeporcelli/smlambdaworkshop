@@ -33,7 +33,7 @@ First, install development tools and the libraries required to compile MXNet. Ap
 
 We are NOT going to use OpenCV, required by MXNet for image processing functions, and NVIDIA CUDA / cuDNN since we do not need to run Apache MXNet with GPU support.
 
-If you want to know more on the dependencies and options to build Apache MXNet from sources, please visit (https://mxnet.incubator.apache.org/install/build\_from\_source.html)[https://mxnet.incubator.apache.org/install/build\_from\_source.html].
+If you want to know more on the dependencies and options to build Apache MXNet from sources, please visit [https://mxnet.incubator.apache.org/install/build\_from\_source.html](https://mxnet.incubator.apache.org/install/build\_from\_source.html).
 
 Execute the following commands in your home folder:
 
