@@ -2,7 +2,7 @@
 
 Once you have trained your model and he's hosted in S3, the next thing to do is to create a Lambda function and expose it by Amazon API Gateway.
 
-## Create Lambda fucntion
+## Create Lambda function
 
 In order to create the Lambda function, we will use Amazon Cloud9 that will help us to build the deployment package of the Lambda function and create the Lambda itself.
 
@@ -19,7 +19,7 @@ Now that we have created our Cloud9 environment we will be waiting a couple of m
 Once the environment is up and running please:
 
 1. Press on AWS Resources on the right side of the screen
-2. Click on the **Lambda icon** to create a new function as it is shown on the picture below ![Screenshot](screenshots/AWSResources.jpeg) 
+2. Click on the **Lambda icon** to create a new function as it is shown on the picture below ![Screenshot](../images/AWSResources.jpeg) 
 3. Type a function name **smlambdaworkshopfunction** and click **Next**
 4. Select **Python2.7** in runtime. Then chose **api-gateway-authorizer-python** and click **Next**
 5. In Function trigger, leave none and click **Next**
