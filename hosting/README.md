@@ -78,7 +78,7 @@ Resources:
           Type: Api
           Properties:
             Path: /
-			  Method: OPTIONS
+	    Method: OPTIONS
 ```
 
 In this template we define a Lambda function with Python 2.7 as runtime and we will also create the Amazon API Gateway that will expose the Lambda function with a GET method.
