@@ -27,9 +27,7 @@ Once the environment is up and running please:
 7. Press **Finish**
 8. Once clicked on **Finish** you might get a pop up window asking for **Drag & drop files here**, in this case, please ignore it by click on **x** on the top right corner of the popup window.
 
-Now that we have created our Lambda, we would have an empty lambda function like this:
-
-![Screenshot](../images/EmptyLambda.jpeg)
+Now that we have created our Lambda function, we would need to remove the code from it.
 
 Next, we need to add all the MXNet libraries, Lambda function code and the model into the folder of the Lambda. First, we will clone the git repository with the MXNet libraries.
 
@@ -81,7 +79,7 @@ Resources:
 	    Method: OPTIONS
 ```
 
-In this template we define a Lambda function with Python 2.7 as runtime and we will also create the Amazon API Gateway that will expose the Lambda function with a GET method.
+In this template we define a Lambda function with Python 2.7 as runtime and we will also create the Amazon API Gateway that will expose the Lambda function with an ANY method.
 
 Now we need to add the model that we trained. To do this, we will use AWS CLI to copy the file from S3. However, before we need to know the URL where the model is. In SageMaker before we indicated the S3 bucket were the model will be stored. By using S3 console we will look for the file and path.
 
@@ -110,7 +108,7 @@ rm -rf .debug/
 
 Once you have downloaded and extracted the model, we can test the Lambda function locally. In order to do this:
 
-1. Expand **LambdaMXNetInference** from the left panel
+1. Expand **smlambdaworkshopfunction** from the left panel
 2. Double click on *lambda_function.py** file in order to open it
 3. Once the file is open, click on the **Run button** on the top of the screen
 
