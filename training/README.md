@@ -49,10 +49,17 @@ In this section, we will create an Amazon S3 bucket as staging area. Amazon Sage
 3. Open the **Amazon S3** console at <a href="https://console.aws.amazon.com/s3">https://console.aws.amazon.com/s3</a> or choose the Amazon S3 service in the menu.
 4.	In the Amazon S3 console, click the **Create Bucket** button.
 	![Amazon S3 create bucket](../images/create_bucket.png)
-5.	For the **Bucket Name**, type _smlambda-workshop-**[your-initials]**_ in the text box and click Next (take note of the bucket name, it will be needed later for loading data in the notebook instance). Leave everything default in the next 2 pages and click **Create Bucket** in the Review page.
+5.	For the **Bucket Name**, type _smlambda-workshop-**[your-initials]**_ in the text box and click Next (take note of the bucket name, it will be needed later for loading data in the notebook instance). Press **Next** to move to the next screen.
 Note: if the bucket name is already taken, feel free to add an extra suffix.
 
 	![Amazon S3 create bucket window](../images/create_bucket_window.png)
+6. Enable versioning of the objects in the bucket as shown in the screen below. This will be required to use AWS CodePipeline in the next sections of the workshop.
+
+	![Amazon S3 create bucket window](../images/s3_versioning.png)
+
+	Press **Next** and then **Next** again leaving the settings as they are in the following screen.
+7. Finally, click **Create Bucket** in the Review page.
+
 
 ### Create a managed Jupyter Notebook instance
 In this section we will use an Amazon SageMaker managed Jupyter notebook instance to prepare and process data and write the code to train the model.
