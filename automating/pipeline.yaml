@@ -423,7 +423,7 @@ Resources:
               type: zip
               files:
                 - outputSamTemplate.yaml
-                - samTemplateCodeDeployTF.yaml
+                - samTemplateCodeDeploy.yaml
           - SourceBucket: !Ref ModelS3Location
             SourceS3ObjectKey: !Ref SourceS3ObjectKey
         InsecureSsl: false
