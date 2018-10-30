@@ -482,7 +482,7 @@ Resources:
               Configuration:
                 ActionMode: CHANGE_SET_REPLACE
                 ChangeSetName: SMSspam
-                RoleArn: 'arn:aws:iam::459905850578:role/Cloudformation-IAM'
+                RoleArn: !GetAtt 'CloudFormationRole.Arn'
                 Capabilities: CAPABILITY_IAM
                 StackName: !Ref LambdaStackName
                 TemplatePath: !Sub 
@@ -508,3 +508,19 @@ Resources:
         Type: S3
         Location: !Ref ArtifactStoreS3Location
       Name: !Ref PipelineName
+
+
+  CloudFormationRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - 'cloudformation.amazonaws.com'
+          Action:
+          - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AdministratorAccess'
