@@ -14,7 +14,7 @@ To begin, AWS CodePipeline invokes AWS CodeBuild to create the deployment packag
 
 First of all, we need to upload two key files into our S3 bucket **_smlambda-workshop-[your-initials]_**. 
 
-1. Download these two files from our repository:
+1. Download these three files from our repository:
 
 ```
 # This is an empty.zip file that is necessary for AWS CodePipeline to use S3 as a source repository. For the way we approached the creation of our Lambda function, this is an empty file zip.  
@@ -23,13 +23,16 @@ wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating
 # This is the CloudFormation template that will create all the pipeline
 wget https://raw.githubusercontent.com/giuseppeporcelli/smlambdaworkshop/master/automating/pipeline.yaml
 
+# This is the Lambda function that will move the model from a bucket to another
+wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating/lambdaCopyModel.zip
+
 ```
 
 2. Go to Amazon S3 Console.
 3. Open your S3 bucket
 4. Click **Upload** button
 5. Click **Add files**
-6. Select **empty.zip**
+6. Select the two files **empty.zip** and **lambdaCopyModel.zip**
 7. Press **Next**, **Next**, **Next** and **Upload**
 
 Now, it is time to create the pipeline. In order to do this, we are going to use AWS CloudFormation:
