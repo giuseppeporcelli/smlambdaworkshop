@@ -57,7 +57,7 @@ Now, we can go back to our SageMaker developer instance and launch the training 
 1. Go to Amazon SageMaker console.
 2. Click on **Notebook instances** and **open** your Notebook instance.
 3. Browse to the folder **smlambdaworkshop > training** and open the file **sms\_spam\_classifier\_mxnet.ipynb**
-4. Go to step 7 and run it again.
+4. Go to step 6 and run it again.
 
 Once the model is trained succesful, the model.tar.gz will be uploaded into the S3 bucket and the pipeline will be triggered.
 
