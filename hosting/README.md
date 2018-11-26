@@ -122,7 +122,7 @@ Here the code of the request and if you have a similar output, this means that y
 
 ```
 {
-	"body": "Call now and get 80% discount on your next pair of shoes! Call 8003344555!",
+	"body": "FreeMsg: Txt: CALL to No: 86888 & claim your reward of 3 hours talk time to use from your phone now!",
 	"httpMethod": "POST",
 	"resource": "/",
 	"queryStringParameters": null,
