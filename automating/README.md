@@ -24,7 +24,7 @@ wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating
 wget https://raw.githubusercontent.com/giuseppeporcelli/smlambdaworkshop/master/automating/pipeline.yaml
 
 # This is the Lambda function that will move the model from a bucket to another
-wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating/lambdaCopyModel.zip
+wget https://s3-eu-west-1.amazonaws.com/gianpo-public/lambdaCopyModel.zip
 
 ```
 
