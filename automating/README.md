@@ -18,7 +18,7 @@ First of all, we need to upload two key files into our S3 bucket **_smlambda-wor
 
 ```
 # This is an empty.zip file that is necessary for AWS CodePipeline to use S3 as a source repository. For the way we approached the creation of our Lambda function, this is an empty file zip.  
-wget https://github.com/giuseppeporcelli/smlambdaworkshop/blob/master/automating/empty.zip
+wget https://s3-eu-west-1.amazonaws.com/gianpo-public/empty.zip
 
 # This is the CloudFormation template that will create all the pipeline
 wget https://raw.githubusercontent.com/giuseppeporcelli/smlambdaworkshop/master/automating/pipeline.yaml
